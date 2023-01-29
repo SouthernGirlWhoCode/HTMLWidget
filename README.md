@@ -182,6 +182,9 @@ _.action('enableScrollingIndicator');
 **Weather**<br>
 | Variable name | Type | Description |
 |---------------|------|-------------|
+| weather.temperature.c | string | celsius |
+| weather.temperature.f | string | fahrenheit |
+| weather.temperature.k | string | kelvin |
 | weather.location | string | Displays the city name |
 | weather.condition | string | Natural language description of the current weather condition |
 | weather.conditionCode | integer | |
@@ -191,26 +194,40 @@ _.action('enableScrollingIndicator');
 | weather.pressure | float | |
 | weather.dewPoint | float | |
 | weather.uvIndex | integer | |
-| weather.low | string | |
-| weather.high | string | |
+| weather.low.c | string | celsius |
+| weather.high.c | string | celsius |
+| weather.low.f | string | fahrenheit |
+| weather.high.f | string | fahrenheit |
+| weather.low.k | string | kelvin |
+| weather.high.k | string | kelvin |
+| weather.feel.like.c | string | celsius |
+| weather.feek.like.f | string | fahrenheit |
+| weather.feel.like.k | string | kelvin |
 | weather.dayForecasts | array | Array of day forecasts |
 | weather.hourlyForecasts | array | Array of hourly forecasts |
 
 **Weather day forecasts (Object in the array)**: ``weather.dayForecasts``<br>
-| Variable name | Type |
-|---------------|------|
-| day | integer |
-| dayOfTheWeek | integer |
-| icon | integer |
-| temperature.high | float |
-| temperature.low | float |
+| Variable name | Type | Description |
+|---------------|------|-------------|
+| day | integer | |
+| dayOfTheWeek | integer | |
+| icon | integer | |
+| temperature.high.c | float | celsius |
+| temperature.low.c | float | celsius |
+| temperature.high.f | float | fahrenheit |
+| temperature.low.f | float | fahrenheit |
+| temperature.high.k | float | kelvin |
+| temperature.low.k | float | kelvin |
 
 **Weather hourly forecast (object in the array)**: ``weather.hourlyForecasts``<br>
 | Variable name | Type | Description |
 |---------------|------|-------------|
 | time | string | In the format of "HH:MM" |
 | conditionCode | integer | |
-| temperature | float | |
+| temperature.c | string | celsius |
+| temperature.f | string | fahrenheit |
+| temperature.k | string | kelvin |
+| precipitation | float |  |
 
 **Events upcoming 7 days events (object in the array)**: ``events.upcoming``<br>
 | Variable name | Type | Description |
