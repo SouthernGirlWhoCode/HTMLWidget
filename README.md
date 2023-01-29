@@ -126,7 +126,14 @@ _.action('enableScrollingIndicator');
 - ``capture.screenshot``
 
 **Toggle**<br>
+- ``toggle.airplanemode``
+- ``toggle.wifi``
+- ``toggle.cellular``
+- ``toggle.bluetooth``
 - ``toggle.lpm``
+- ``toggle.appearance``
+- ``toggle.flashlight``
+- ``toggle.orientation``
 - ``toggle.respring``
 - ``toggle.safemode``
 
@@ -204,3 +211,29 @@ _.action('enableScrollingIndicator');
 | time | string | In the format of "HH:MM" |
 | conditionCode | integer | |
 | temperature | float | |
+
+**Events upcoming 7 days events (object in the array)**: ``events.upcoming``<br>
+| Variable name | Type | Description |
+|---------------|------|-------------|
+| title | string | |
+| startTime | string | In the format of "dd/MM HH:mm" |
+| endTime | string | In the format of "dd/MM HH:mm" |
+
+**Alarms (object in the array)**: ``alarm.list``<br>
+| Variable name | Type | Description |
+|---------------|------|-------------|
+| time | string | In the format of HH:mm |
+| remaining | string | In the format of HH:mm |
+| enabled | boolean | Whether the alarm clock is enabled |
+
+**Media**<br>
+| Variable name | Type | Description |
+|---------------|------|-------------|
+| media.playing | boolean | ``true`` if any media is playing, otherwise ``false`` |
+| media.album | string | Album title |
+| media.artist | string | Artist name |
+| media.title | string | Title |
+| media.elapsed | float | Playback time in seconds |
+| media.duration | float | Track duration |
+| media.application | string | Bundle identifier of the currently playing application |
+| media.image | string | HTML data URL with a JPEG image of the artwork |
